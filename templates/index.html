@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Pass Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Pass Prediction</h1>
+        <p class="subtitle">Enter the student's details to predict their academic performance.</p>
+
+        <form action="/predict" method="POST">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="school">School</label>
+                    <select name="school" id="school" required>
+                        <option value="GP">Gabriel Pereira (GP)</option>
+                        <option value="MS">Mousinho da Silveira (MS)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Gender</label>
+                    <select name="sex" id="sex" required>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" min="15" max="22" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address Type</label>
+                    <select name="address" id="address" required>
+                        <option value="U">Urban</option>
+                        <option value="R">Rural</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="famsize">Family Size</label>
+                    <select name="famsize" id="famsize" required>
+                        <option value="GT3">Greater than 3</option>
+                        <option value="LE3">3 or fewer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Pstatus">Parents' Cohabitation Status</label>
+                    <select name="Pstatus" id="Pstatus" required>
+                        <option value="T">Living together</option>
+                        <option value="A">Living apart</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Medu">Mother's Education</label>
+                    <select name="Medu" id="Medu" required>
+                        <option value="0">None</option>
+                        <option value="1">Primary education</option>
+                        <option value="2">5th to 9th grade</option>
+                        <option value="3">Secondary education</option>
+                        <option value="4">Higher education</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Fedu">Father's Education</label>
+                    <select name="Fedu" id="Fedu" required>
+                        <option value="0">None</option>
+                        <option value="1">Primary education</option>
+                        <option value="2">5th to 9th grade</option>
+                        <option value="3">Secondary education</option>
+                        <option value="4">Higher education</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studytime">Weekly Study Time</label>
+                    <select name="studytime" id="studytime" required>
+                        <option value="1">Less than 2 hours</option>
+                        <option value="2">2–5 hours</option>
+                        <option value="3">5–10 hours</option>
+                        <option value="4">More than 10 hours</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="failures">Past Class Failures</label>
+                    <select name="failures" id="failures" required>
+                        <option value="0">No failures</option>
+                        <option value="1">1 failure</option>
+                        <option value="2">2 failures</option>
+                        <option value="3">3 or more failures</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="schoolsup">Extra Educational Support</label>
+                    <select name="schoolsup" id="schoolsup" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="famsup">Family Educational Support</label>
+                    <select name="famsup" id="famsup" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="paid">Extra Paid Classes</label>
+                    <select name="paid" id="paid" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="activities">Extracurricular Activities</label>
+                    <select name="activities" id="activities" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nursery">Attended Nursery School</label>
+                    <select name="nursery" id="nursery" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="higher">Wants Higher Education</label>
+                    <select name="higher" id="higher" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="internet">Internet Access at Home</label>
+                    <select name="internet" id="internet" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="romantic">In a Romantic Relationship</label>
+                    <select name="romantic" id="romantic" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit">Predict Student Result</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="result-container">
+
+        <h1>Student Prediction Result</h1>
+
+        <div class="student-details">
+            <p><strong>School:</strong> {{ school }}</p>
+            <p><strong>Gender:</strong>
+                {% if sex == 'F' %}
+                    Female
+                {% else %}
+                    Male
+                {% endif %}
+            </p>
+            <p><strong>Age:</strong> {{ age }}</p>
+        </div>
+
+        <div class="prediction-box
+            {% if 'likely to pass' in prediction_text and 'unlikely' not in prediction_text %}
+                pass
+            {% else %}
+                fail
+            {% endif %}">
+
+            <h2>{{ prediction_text }}</h2>
+
+        </div>
+
+        <a href="/" class="back-button">Predict Another Student</a>
+
+    </div>
+
+</body>
+</html>

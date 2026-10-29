@@ -1,0 +1,213 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #243047;
+    min-height: 100vh;
+    padding: 30px 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(30, 55, 90, 0.12);
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    color: #2448a5;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: #2448a5;
+    font-size: 23px;
+    margin: 25px 0 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #69758a;
+    margin-bottom: 28px;
+}
+
+/* ===== Form Elements ===== */
+form {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 16px 0 7px;
+    color: #34415a;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccd5e2;
+    border-radius: 9px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fbfcff;
+    color: #243047;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4263eb;
+    box-shadow: 0 0 0 3px rgba(66, 99, 235, 0.13);
+}
+
+/* ===== Buttons ===== */
+button,
+.btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #4263eb, #2448a5);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(36, 72, 165, 0.22);
+}
+
+/* ===== Result Cards ===== */
+.result-card {
+    background: #f7f9ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 18px 0;
+}
+
+.result-card p {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.result-card strong {
+    color: #2448a5;
+}
+
+.prediction {
+    background: #e9f8ef;
+    border: 1px solid #b7e4c7;
+    color: #17663a;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 22px 0;
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #ffffff;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #e1e7f0;
+    text-align: left;
+}
+
+th {
+    background: #2448a5;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background: #f5f7fc;
+}
+
+/* ===== Links ===== */
+a {
+    color: #3157c8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    color: #78849a;
+    font-size: 13px;
+    margin-top: 28px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        margin: 10px auto;
+        padding: 22px 17px;
+        border-radius: 13px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
